@@ -37,5 +37,6 @@ export async function getStaticProps() {
   const fillteredPosts = await getAllPostsData();
   return {
     props: { fillteredPosts },
+    revalidate: 3, //html再生成は現在の設定では３秒間に一度
   };
 }

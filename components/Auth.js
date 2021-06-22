@@ -1,7 +1,7 @@
 import { useState } from "react";
 import { useRouter } from "next/router";
 import Cookie from "universal-cookie";
-import Image from 'next/image'
+import Image from "next/image";
 
 const cookie = new Cookie();
 
@@ -69,11 +69,14 @@ export default function Auth() {
   return (
     <div className="max-w-md w-full space-y-8">
       <div>
-        <Image
-          className="mx-auto h-12 w-auto"
-          src="https://tailwindui.com/img/logos/workflow-mark-indigo-600.svg"
-          alt="Workflow"
-        />
+        <div className="mx-auto h-12 w-auto text-center">
+          <Image
+            src="https://tailwindui.com/img/logos/workflow-mark-indigo-600.svg"
+            alt="Workflow"
+            width={50}
+            height={50}
+          />
+        </div>
         <h2 className="mt-6 text-center text-3xl font-extrabold text-white">
           {isLogin ? "Login" : "sign up"}
         </h2>
